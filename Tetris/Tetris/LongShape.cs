@@ -1,18 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Tetris {
     class LongShape : IShape
     {
+        private Cell[,] currentMap;
         public LongShape()
         {
-            ShapeMap = new LongShapeMap();
+            ShapeMaps = new LongShapeMaps();
+            currentMap = ShapeMaps.Maps[0];
         }
 
         public void Rotate()
         {
-            throw new NotImplementedException();
+            currentMap = (ShapeMaps.Maps.IndexOf(currentMap) + 1) > ShapeMaps.Maps.Count ? ShapeMaps.Maps[0] : ShapeMaps.Maps[ShapeMaps.Maps.IndexOf(currentMap) + 1];
         }
 
-        public IShapeMap ShapeMap { get; set; }
+        public IShapeMaps ShapeMaps { get; set; }
     }
 }

@@ -1,7 +1,10 @@
-﻿namespace Tetris
+﻿using System.Collections.Generic;
+
+namespace Tetris
 {
-    public interface IShape {
+    public interface IShape
+    {
+        IShapeMaps ShapeMaps { get; set; }
         void Rotate();
-        IShapeMap ShapeMap { get; set; }
-    }    
+    }
 }
