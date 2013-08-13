@@ -11,6 +11,11 @@ namespace Tetris {
 
     public interface IWell {
         void AddShape(IShape shape);
+        void Continue();
+        IWellMap GetWellMap();
+    }
+
+    public interface IWellMap {
     }
 
     public interface IShape {
