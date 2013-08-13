@@ -97,11 +97,45 @@ namespace Tetris {
         void Draw();
     }
 
+
     public interface IShape {
         void Rotate();
-        IShapeMap GetShapeMap();
+        IShapeMap ShapeMap { get; set; }
     }
 
-    public interface IShapeMap {
+    class LongShape : IShape
+    {
+        public LongShape()
+        {
+            ShapeMap = new LongShapeMap();
+        }
+
+        public void Rotate()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IShapeMap ShapeMap { get; set; }
     }
+    public interface  IShapeMap
+    {
+        bool[,] ShapeMap { get; set; }
+    }
+
+
+    public class LongShapeMap : IShapeMap
+    {
+        public LongShapeMap()
+        {
+            ShapeMap = new[,]
+                {
+                    {true},
+                    {true},
+                    {true},
+                    {true}
+                };
+        }
+
+        public bool[,] ShapeMap { get; set; }
+    }    
 }
