@@ -2,6 +2,6 @@
 {
     public interface IShape {
         void Rotate();
-        ShapeMap ShapeMap { get; set; }
-    }
+        IShapeMap ShapeMap { get; set; }
+    }    
 }

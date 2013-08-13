@@ -43,8 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cell.cs" />
+    <Compile Include="IShape.cs" />
+    <Compile Include="IShapeMap.cs" />
+    <Compile Include="IWell.cs" />
+    <Compile Include="IWellMap.cs" />
+    <Compile Include="LongShape.cs" />
+    <Compile Include="LongShapeMap.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WallCell.cs" />
+    <Compile Include="Well.cs" />
+    <Compile Include="WellMap.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
