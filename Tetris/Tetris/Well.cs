@@ -17,7 +17,10 @@ namespace Tetris {
             // other logic here
             if (ShapeHasCompletedDescent()) {
                 ShapeCompletedDescent(this, null);
+                return;
             }
+
+            
         }
 
         public IWellMap GetWellMap() {
@@ -27,7 +30,7 @@ namespace Tetris {
         public event EventHandler ShapeCompletedDescent;
 
         private bool ShapeHasCompletedDescent() {
-            throw new NotImplementedException();
+            return false;
         }
     }
 }

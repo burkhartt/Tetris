@@ -27,10 +27,10 @@ namespace Tetris {
         public void Draw() {
             for (var i = 0; i < height; i++) {
                 for (var j = 0; j < width; j++) {
+                    Console.SetCursorPosition(j, i);
                     cells[i, j].Draw();
                 }
-                Console.Write("\r\n");
             }
-        }
+        }        
     }
 }
